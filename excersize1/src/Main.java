@@ -8,21 +8,16 @@ public class Main {
         System.out.println("Prime numbers less than " + n + " are: ");
         for (int i = 2; i < n; i++) {
             if (checkPrime(i)) {
-                System.out.print(i + "\t");
+                System.out.println(i);
             }
         }
     }
 
     public static boolean checkPrime(int n) {
-        if (n < 2) {
-            return false;
-        } else {
-            for (int i = 2; i <= n / 2; i++) {
-                if (n % i == 0) {
-                    return false;
-                }
-            }
-            return true;
+        if (n < 2) return false;
+        for (int i = 2; i <= Math.sqrt(n); i++) {
+            if (n % i == 0) return false;
         }
+        return true;
     }
 }

@@ -14,9 +14,10 @@ public class Main {
             arr[i] = input.nextInt();
         }
         System.out.println("The newly created array has the form: " + Arrays.toString(arr));
-        System.out.println("\nTotal of elements on array: " + sumArray(arr));
+        System.out.println("Total of elements on array: " + sumArray(arr));
         System.out.println("Max value on array: " + maxArray(arr));
     }
+    //*---------------------Calculator total elements of array-----------------------*/
     public static int sumArray(int[] arr) {
         int sum = 0;
         for (int j : arr) {
@@ -24,6 +25,7 @@ public class Main {
         }
         return sum;
     }
+    //*---------------------Search max value of array-----------------------*/
     public static int maxArray(int[] arr) {
         int max = arr[0];
         for (int j : arr) {
